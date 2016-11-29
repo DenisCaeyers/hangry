@@ -17,7 +17,7 @@
 
 if (!isset($content_width))
 {
-    $content_width = 900;
+    $content_width = 1000;
 }
 
 if (function_exists('add_theme_support'))
@@ -72,7 +72,7 @@ function html5blank_nav()
 		'container'       => 'div',
 		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu',
+		'menu_class'      => 'nav',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -80,7 +80,7 @@ function html5blank_nav()
 		'after'           => '',
 		'link_before'     => '',
 		'link_after'      => '',
-		'items_wrap'      => '<ul>%3$s</ul>',
+		'items_wrap'      => '<ul class="nav navbar-nav">%3$s</ul>',
 		'depth'           => 0,
 		'walker'          => ''
 		)

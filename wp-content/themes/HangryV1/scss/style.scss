@@ -1,0 +1,62 @@
+/*
+Theme Name: Hangry V1
+Author: Denis Caeyers
+Author URI: http://hangry.be
+Version: 1.0
+*/
+
+@import 'variables';
+@import 'mixins';
+@import './bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import 'header';
+@import 'body';
+
+body{
+    font-family: arial;
+    font-size: 14px;
+}
+
+a:link,a:visited{
+    color:$c-accent-1;
+}
+
+p{
+    line-height: 1.65em;
+}
+
+div.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*
+Header
+*/
+
+
+/*
+Footer
+*/
+
+.site-footer{
+    border-top: 2px solid lightblue;
+}
+
+/*
+Article
+*/
+
+article.post{
+    border-bottom: 2px dotted lightcoral;
+}
+
+article.post:last-of-type{
+    border-bottom:none;
+}
+
+/*
+Navigation menus
+*/

@@ -1,0 +1,25 @@
+{
+  "name": "hangry1",
+  "version": "1.0.0",
+  "description": "Hangry Website",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisCaeyers/hangry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisCaeyers/hangry/issues"
+  },
+  "homepage": "https://github.com/DenisCaeyers/hangry#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
