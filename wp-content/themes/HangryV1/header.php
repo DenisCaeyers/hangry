@@ -6,13 +6,22 @@
         <title><?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
         <script src="https://use.fontawesome.com/465c538f9f.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
 
 <body <?php body_class(); ?>>
 
         <header class="site-header clearfix">
             
-            <nav class="navbar navbar-default navbar-fixed-top" data-0="background-color:rgba(48,86,77,0.0);" data-100="background-color:rgba(48,86,77,1);">
+            <nav class="navbar navbar-default navbar-fixed-top" data-0="background-color:rgba(0,0,0,0.2);" data-100="background-color:rgba(0,0,0,0.7);">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
                 <?php 
                 // Fix menu overlap
                 if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>'; 
@@ -30,6 +39,7 @@
                             <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
                             <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
                             <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
+                            <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>

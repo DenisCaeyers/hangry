@@ -1,15 +1,28 @@
 body{
-    background-color: $c-accent-3;
+    background: rgba(0,0,0,0.5);
     #content{
         background-color: white;
         padding-top: $gutter*2;
         padding-bottom:$gutter*2;
         margin-top: -30px;
+        box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.8);
 
         article.post{
             h2{
                 font-family: $f-title;
             }
+            img{
+                @extend .img-responsive;
+            }
+        }
+        article.single{
+             h1{
+                font-family: $f-title;
+            }
+            img{
+                @extend .img-responsive;
+            }
         }
     }
+
 }

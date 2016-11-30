@@ -1094,7 +1094,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive {
+.img-responsive, body #content article.post img, body #content article.single img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -1545,7 +1545,7 @@ pre {
   .row:after, header.site-header div.header-content-wrapper:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, header.site-header nav div.social-media, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, header.site-header nav div.menu-primary-menu-links-container, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1814,11 +1814,11 @@ pre {
     margin-left: 100%; } }
 
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, header.site-header nav div.social-media, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, header.site-header nav div.menu-primary-menu-links-container, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-1 {
     width: 8.33333%; }
-  .col-md-2, header.site-header nav div.social-media {
+  .col-md-2 {
     width: 16.66667%; }
   .col-md-3 {
     width: 25%; }
@@ -1834,7 +1834,7 @@ pre {
     width: 66.66667%; }
   .col-md-9 {
     width: 75%; }
-  .col-md-10, header.site-header nav div.menu-primary-menu-links-container {
+  .col-md-10 {
     width: 83.33333%; }
   .col-md-11 {
     width: 91.66667%; }
@@ -3098,9 +3098,9 @@ input[type="button"].btn-block {
   .fade.in {
     opacity: 1; }
 
-.collapse, header.site-header nav div.menu-primary-menu-links-container {
+.collapse, header.site-header nav div.container div.menu-primary-menu-links-container {
   display: none; }
-  .collapse.in, header.site-header nav div.in.menu-primary-menu-links-container {
+  .collapse.in, header.site-header nav div.container div.in.menu-primary-menu-links-container {
     display: block; }
 
 tr.collapse.in {
@@ -3518,41 +3518,41 @@ tbody.collapse.in {
     z-index: 2;
     margin-left: -1px; }
 
-.nav, header.site-header nav div.menu-primary-menu-links-container ul {
+.nav, header.site-header nav div.container div.menu-primary-menu-links-container ul {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none; }
-  .nav:before, header.site-header nav div.menu-primary-menu-links-container ul:before, .nav:after, header.site-header nav div.menu-primary-menu-links-container ul:after {
+  .nav:before, header.site-header nav div.container div.menu-primary-menu-links-container ul:before, .nav:after, header.site-header nav div.container div.menu-primary-menu-links-container ul:after {
     content: " ";
     display: table; }
-  .nav:after, header.site-header nav div.menu-primary-menu-links-container ul:after {
+  .nav:after, header.site-header nav div.container div.menu-primary-menu-links-container ul:after {
     clear: both; }
-  .nav > li, header.site-header nav div.menu-primary-menu-links-container ul > li {
+  .nav > li, header.site-header nav div.container div.menu-primary-menu-links-container ul > li {
     position: relative;
     display: block; }
-    .nav > li > a, header.site-header nav div.menu-primary-menu-links-container ul > li > a {
+    .nav > li > a, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a {
       position: relative;
       display: block;
       padding: 10px 15px; }
-      .nav > li > a:hover, header.site-header nav div.menu-primary-menu-links-container ul > li > a:hover, .nav > li > a:focus, header.site-header nav div.menu-primary-menu-links-container ul > li > a:focus {
+      .nav > li > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a:hover, .nav > li > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a:focus {
         text-decoration: none;
         background-color: #eeeeee; }
-    .nav > li.disabled > a, header.site-header nav div.menu-primary-menu-links-container ul > li.disabled > a {
+    .nav > li.disabled > a, header.site-header nav div.container div.menu-primary-menu-links-container ul > li.disabled > a {
       color: #777777; }
-      .nav > li.disabled > a:hover, header.site-header nav div.menu-primary-menu-links-container ul > li.disabled > a:hover, .nav > li.disabled > a:focus, header.site-header nav div.menu-primary-menu-links-container ul > li.disabled > a:focus {
+      .nav > li.disabled > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container ul > li.disabled > a:hover, .nav > li.disabled > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container ul > li.disabled > a:focus {
         color: #777777;
         text-decoration: none;
         background-color: transparent;
         cursor: not-allowed; }
-  .nav .open > a, header.site-header nav div.menu-primary-menu-links-container ul .open > a, .nav .open > a:hover, header.site-header nav div.menu-primary-menu-links-container ul .open > a:hover, .nav .open > a:focus, header.site-header nav div.menu-primary-menu-links-container ul .open > a:focus {
+  .nav .open > a, header.site-header nav div.container div.menu-primary-menu-links-container ul .open > a, .nav .open > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container ul .open > a:hover, .nav .open > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container ul .open > a:focus {
     background-color: #eeeeee;
     border-color: #337ab7; }
-  .nav .nav-divider, header.site-header nav div.menu-primary-menu-links-container ul .nav-divider {
+  .nav .nav-divider, header.site-header nav div.container div.menu-primary-menu-links-container ul .nav-divider {
     height: 1px;
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
-  .nav > li > a > img, header.site-header nav div.menu-primary-menu-links-container ul > li > a > img {
+  .nav > li > a > img, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a > img {
     max-width: none; }
 
 .nav-tabs {
@@ -3661,68 +3661,68 @@ tbody.collapse.in {
   .navbar-header {
     float: left; } }
 
-.navbar-collapse, header.site-header nav div.menu-primary-menu-links-container {
+.navbar-collapse, header.site-header nav div.container div.menu-primary-menu-links-container {
   overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch; }
-  .navbar-collapse:before, header.site-header nav div.menu-primary-menu-links-container:before, .navbar-collapse:after, header.site-header nav div.menu-primary-menu-links-container:after {
+  .navbar-collapse:before, header.site-header nav div.container div.menu-primary-menu-links-container:before, .navbar-collapse:after, header.site-header nav div.container div.menu-primary-menu-links-container:after {
     content: " ";
     display: table; }
-  .navbar-collapse:after, header.site-header nav div.menu-primary-menu-links-container:after {
+  .navbar-collapse:after, header.site-header nav div.container div.menu-primary-menu-links-container:after {
     clear: both; }
-  .navbar-collapse.in, header.site-header nav div.in.menu-primary-menu-links-container {
+  .navbar-collapse.in, header.site-header nav div.container div.in.menu-primary-menu-links-container {
     overflow-y: auto; }
   @media (min-width: 768px) {
-    .navbar-collapse, header.site-header nav div.menu-primary-menu-links-container {
+    .navbar-collapse, header.site-header nav div.container div.menu-primary-menu-links-container {
       width: auto;
       border-top: 0;
       box-shadow: none; }
-      .navbar-collapse.collapse, header.site-header nav div.menu-primary-menu-links-container {
+      .navbar-collapse.collapse, header.site-header nav div.container div.menu-primary-menu-links-container {
         display: block !important;
         height: auto !important;
         padding-bottom: 0;
         overflow: visible !important; }
-      .navbar-collapse.in, header.site-header nav div.in.menu-primary-menu-links-container {
+      .navbar-collapse.in, header.site-header nav div.container div.in.menu-primary-menu-links-container {
         overflow-y: visible; }
-      .navbar-fixed-top .navbar-collapse, .navbar-fixed-top header.site-header nav div.menu-primary-menu-links-container, header.site-header nav .navbar-fixed-top div.menu-primary-menu-links-container,
+      .navbar-fixed-top .navbar-collapse, .navbar-fixed-top header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container .navbar-fixed-top div.menu-primary-menu-links-container,
       .navbar-static-top .navbar-collapse,
-      .navbar-static-top header.site-header nav div.menu-primary-menu-links-container, header.site-header nav
+      .navbar-static-top header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container
       .navbar-static-top div.menu-primary-menu-links-container,
       .navbar-fixed-bottom .navbar-collapse,
-      .navbar-fixed-bottom header.site-header nav div.menu-primary-menu-links-container, header.site-header nav
+      .navbar-fixed-bottom header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container
       .navbar-fixed-bottom div.menu-primary-menu-links-container {
         padding-left: 0;
         padding-right: 0; } }
 
-.navbar-fixed-top .navbar-collapse, .navbar-fixed-top header.site-header nav div.menu-primary-menu-links-container, header.site-header nav .navbar-fixed-top div.menu-primary-menu-links-container,
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-top header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container .navbar-fixed-top div.menu-primary-menu-links-container,
 .navbar-fixed-bottom .navbar-collapse,
-.navbar-fixed-bottom header.site-header nav div.menu-primary-menu-links-container, header.site-header nav
+.navbar-fixed-bottom header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container
 .navbar-fixed-bottom div.menu-primary-menu-links-container {
   max-height: 340px; }
   @media (max-device-width: 480px) and (orientation: landscape) {
-    .navbar-fixed-top .navbar-collapse, .navbar-fixed-top header.site-header nav div.menu-primary-menu-links-container, header.site-header nav .navbar-fixed-top div.menu-primary-menu-links-container,
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-top header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container .navbar-fixed-top div.menu-primary-menu-links-container,
     .navbar-fixed-bottom .navbar-collapse,
-    .navbar-fixed-bottom header.site-header nav div.menu-primary-menu-links-container, header.site-header nav
+    .navbar-fixed-bottom header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container
     .navbar-fixed-bottom div.menu-primary-menu-links-container {
       max-height: 200px; } }
 
 .container > .navbar-header,
-.container > .navbar-collapse, header.site-header nav
+.container > .navbar-collapse, header.site-header nav div.container
 .container > div.menu-primary-menu-links-container,
 .container-fluid > .navbar-header,
-.container-fluid > .navbar-collapse, header.site-header nav
+.container-fluid > .navbar-collapse, header.site-header nav div.container
 .container-fluid > div.menu-primary-menu-links-container {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
     .container > .navbar-header,
-    .container > .navbar-collapse, header.site-header nav
+    .container > .navbar-collapse, header.site-header nav div.container
     .container > div.menu-primary-menu-links-container,
     .container-fluid > .navbar-header,
-    .container-fluid > .navbar-collapse, header.site-header nav
+    .container-fluid > .navbar-collapse, header.site-header nav div.container
     .container-fluid > div.menu-primary-menu-links-container {
       margin-right: 0;
       margin-left: 0; } }
@@ -3793,14 +3793,14 @@ tbody.collapse.in {
     .navbar-toggle {
       display: none; } }
 
-.navbar-nav, header.site-header nav div.menu-primary-menu-links-container ul {
+.navbar-nav, header.site-header nav div.container div.menu-primary-menu-links-container ul {
   margin: 7.5px -15px; }
-  .navbar-nav > li > a, header.site-header nav div.menu-primary-menu-links-container ul > li > a {
+  .navbar-nav > li > a, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px; }
   @media (max-width: 767px) {
-    .navbar-nav .open .dropdown-menu, header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu {
+    .navbar-nav .open .dropdown-menu, header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu {
       position: static;
       float: none;
       width: auto;
@@ -3808,20 +3808,20 @@ tbody.collapse.in {
       background-color: transparent;
       border: 0;
       box-shadow: none; }
-      .navbar-nav .open .dropdown-menu > li > a, header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a,
-      .navbar-nav .open .dropdown-menu .dropdown-header, header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu .dropdown-header {
+      .navbar-nav .open .dropdown-menu > li > a, header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a,
+      .navbar-nav .open .dropdown-menu .dropdown-header, header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu .dropdown-header {
         padding: 5px 15px 5px 25px; }
-      .navbar-nav .open .dropdown-menu > li > a, header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a {
+      .navbar-nav .open .dropdown-menu > li > a, header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a {
         line-height: 20px; }
-        .navbar-nav .open .dropdown-menu > li > a:hover, header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus, header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:focus {
+        .navbar-nav .open .dropdown-menu > li > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:focus {
           background-image: none; } }
   @media (min-width: 768px) {
-    .navbar-nav, header.site-header nav div.menu-primary-menu-links-container ul {
+    .navbar-nav, header.site-header nav div.container div.menu-primary-menu-links-container ul {
       float: left;
       margin: 0; }
-      .navbar-nav > li, header.site-header nav div.menu-primary-menu-links-container ul > li {
+      .navbar-nav > li, header.site-header nav div.container div.menu-primary-menu-links-container ul > li {
         float: left; }
-        .navbar-nav > li > a, header.site-header nav div.menu-primary-menu-links-container ul > li > a {
+        .navbar-nav > li > a, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a {
           padding-top: 15px;
           padding-bottom: 15px; } }
 
@@ -3887,12 +3887,12 @@ tbody.collapse.in {
       padding-bottom: 0;
       box-shadow: none; } }
 
-.navbar-nav > li > .dropdown-menu, header.site-header nav div.menu-primary-menu-links-container ul > li > .dropdown-menu {
+.navbar-nav > li > .dropdown-menu, header.site-header nav div.container div.menu-primary-menu-links-container ul > li > .dropdown-menu {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu, .navbar-fixed-bottom header.site-header nav div.menu-primary-menu-links-container ul > li > .dropdown-menu, header.site-header nav div.menu-primary-menu-links-container .navbar-fixed-bottom ul > li > .dropdown-menu {
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu, .navbar-fixed-bottom header.site-header nav div.container div.menu-primary-menu-links-container ul > li > .dropdown-menu, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-fixed-bottom ul > li > .dropdown-menu {
   margin-bottom: 0;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -3937,15 +3937,15 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-default .navbar-text {
     color: #777; }
-  .navbar-default .navbar-nav > li > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > li > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > li > a {
+  .navbar-default .navbar-nav > li > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > li > a {
     color: #777; }
-    .navbar-default .navbar-nav > li > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > li > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > li > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > li > a:focus {
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > li > a:focus {
       color: #333;
       background-color: transparent; }
-  .navbar-default .navbar-nav > .active > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .active > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .active > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .active > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .active > a:focus {
+  .navbar-default .navbar-nav > .active > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .active > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .active > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .active > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .active > a:focus {
     color: #555;
     background-color: #e7e7e7; }
-  .navbar-default .navbar-nav > .disabled > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .disabled > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .disabled > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .disabled > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .disabled > a:focus {
+  .navbar-default .navbar-nav > .disabled > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .disabled > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .disabled > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .disabled > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
   .navbar-default .navbar-toggle {
@@ -3954,22 +3954,22 @@ tbody.collapse.in {
       background-color: #ddd; }
     .navbar-default .navbar-toggle .icon-bar {
       background-color: #888; }
-  .navbar-default .navbar-collapse, .navbar-default header.site-header nav div.menu-primary-menu-links-container, header.site-header nav .navbar-default div.menu-primary-menu-links-container,
+  .navbar-default .navbar-collapse, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container .navbar-default div.menu-primary-menu-links-container,
   .navbar-default .navbar-form {
     border-color: #e7e7e7; }
-  .navbar-default .navbar-nav > .open > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .open > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .open > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul > .open > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul > .open > a:focus {
+  .navbar-default .navbar-nav > .open > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .open > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .open > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul > .open > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul > .open > a:focus {
     background-color: #e7e7e7;
     color: #555; }
   @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > li > a {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > li > a {
       color: #777; }
-      .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > li > a:focus {
+      .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > li > a:focus {
         color: #333;
         background-color: transparent; }
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .active > a:focus {
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .active > a:focus {
       color: #555;
       background-color: #e7e7e7; }
-    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-default header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .disabled > a:focus {
+    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-default header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-default ul .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
   .navbar-default .navbar-link {
@@ -3995,15 +3995,15 @@ tbody.collapse.in {
       background-color: transparent; }
   .navbar-inverse .navbar-text {
     color: #9d9d9d; }
-  .navbar-inverse .navbar-nav > li > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > li > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > li > a {
+  .navbar-inverse .navbar-nav > li > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > li > a {
     color: #9d9d9d; }
-    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > li > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > li > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > li > a:focus {
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > li > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > li > a:focus {
       color: #fff;
       background-color: transparent; }
-  .navbar-inverse .navbar-nav > .active > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .active > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .active > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .active > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .active > a:focus {
+  .navbar-inverse .navbar-nav > .active > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .active > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .active > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .active > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .active > a:focus {
     color: #fff;
     background-color: #090909; }
-  .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .disabled > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .disabled > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .disabled > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .disabled > a:focus {
+  .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .disabled > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .disabled > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .disabled > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .disabled > a:focus {
     color: #444;
     background-color: transparent; }
   .navbar-inverse .navbar-toggle {
@@ -4012,26 +4012,26 @@ tbody.collapse.in {
       background-color: #333; }
     .navbar-inverse .navbar-toggle .icon-bar {
       background-color: #fff; }
-  .navbar-inverse .navbar-collapse, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container, header.site-header nav .navbar-inverse div.menu-primary-menu-links-container,
+  .navbar-inverse .navbar-collapse, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container, header.site-header nav div.container .navbar-inverse div.menu-primary-menu-links-container,
   .navbar-inverse .navbar-form {
     border-color: #101010; }
-  .navbar-inverse .navbar-nav > .open > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .open > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .open > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul > .open > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul > .open > a:focus {
+  .navbar-inverse .navbar-nav > .open > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .open > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .open > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul > .open > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul > .open > a:focus {
     background-color: #090909;
     color: #fff; }
   @media (max-width: 767px) {
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .dropdown-header, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .dropdown-header {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .dropdown-header, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .dropdown-header {
       border-color: #090909; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu .divider, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu .divider {
+    .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu .divider, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu .divider {
       background-color: #090909; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > li > a {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > li > a {
       color: #9d9d9d; }
-      .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > li > a:focus {
+      .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > li > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > li > a:focus {
         color: #fff;
         background-color: transparent; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .active > a:focus {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .active > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .active > a:focus {
       color: #fff;
       background-color: #090909; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:hover, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse header.site-header nav div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:focus, header.site-header nav div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .disabled > a:focus {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:hover, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse header.site-header nav div.container div.menu-primary-menu-links-container ul .open .dropdown-menu > .disabled > a:focus, header.site-header nav div.container div.menu-primary-menu-links-container .navbar-inverse ul .open .dropdown-menu > .disabled > a:focus {
       color: #444;
       background-color: transparent; } }
   .navbar-inverse .navbar-link {
@@ -5776,26 +5776,33 @@ button.close {
     display: none !important; } }
 
 header.site-header {
-  /* temporary */
-  background-image: url("https://rabbitbox.files.wordpress.com/2012/11/background-wide-wallpaper-1920x1080-005.jpg"); }
+  /* temporary */ }
   header.site-header nav {
     background-color: transparent;
     border-color: transparent; }
-    header.site-header nav div.menu-primary-menu-links-container ul li a {
-      color: rgba(255, 255, 255, 0.7);
-      transition: .5s;
-      transition: color .1s ease-in; }
-      header.site-header nav div.menu-primary-menu-links-container ul li a:hover {
-        background-color: transparent;
-        color: white; }
-    header.site-header nav div.social-media ul li a {
-      padding: 0;
-      color: rgba(255, 255, 255, 0.7);
-      transition: .5s;
-      transition: color .1s ease-in; }
-      header.site-header nav div.social-media ul li a:hover {
-        background-color: transparent;
-        color: white; }
+    header.site-header nav div.container {
+      position: relative; }
+      header.site-header nav div.container div.menu-primary-menu-links-container ul li a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: .5s;
+        transition: color .1s ease-in; }
+        header.site-header nav div.container div.menu-primary-menu-links-container ul li a:hover {
+          background-color: transparent;
+          color: white; }
+      header.site-header nav div.container div.social-media {
+        position: absolute;
+        right: 30px;
+        top: 18px; }
+        header.site-header nav div.container div.social-media ul li a {
+          padding: 0;
+          color: rgba(255, 255, 255, 0.7);
+          transition: .5s;
+          transition: color .1s ease-in;
+          font-size: 24px;
+          padding-right: 15px; }
+          header.site-header nav div.container div.social-media ul li a:hover {
+            background-color: transparent;
+            color: white; }
   header.site-header div.header-content-wrapper {
     padding-top: 90px;
     padding-bottom: 90px; }
@@ -5805,16 +5812,23 @@ header.site-header {
       margin: 0 auto; }
     header.site-header div.header-content-wrapper .site-description {
       /* Center the description */
-      text-align: center; }
+      text-align: center;
+      font-family: "Oleo Script", cursive;
+      color: white;
+      font-size: 28px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); }
 
 body {
-  background-color: #E7E0D0; }
+  background: rgba(0, 0, 0, 0.5); }
   body #content {
     background-color: white;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: -30px; }
+    margin-top: -30px;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.8); }
     body #content article.post h2 {
+      font-family: "Oleo Script", cursive; }
+    body #content article.single h1 {
       font-family: "Oleo Script", cursive; }
 
 body {
@@ -5836,12 +5850,6 @@ div.container {
 /*
 Header
 */
-/*
-Footer
-*/
-.site-footer {
-  border-top: 2px solid lightblue; }
-
 /*
 Article
 */

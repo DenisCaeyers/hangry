@@ -18,10 +18,20 @@ function theme_prefix_setup() {
 
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
-// Navigation menus
-register_nav_menus(array(
-    'primary' => __('Primary Menu'),
-    'footer' => __('Footer Menu'),
-));
+
+// Add Featured image thumbnail
+function hangryv1_setup(){
+
+    // Navigation menus
+    register_nav_menus(array(
+        'primary' => __('Primary Menu'),
+        'footer' => __('Footer Menu'),
+    ));
+
+    add_theme_support('post-thumbnails');
+    add_image_size('small-thumb', 180, 120, true);
+    add_image_size('banner-image', 920, 210, true);
+}
+add_action('after_setup_theme','hangryv1_setup')
 
 ?>

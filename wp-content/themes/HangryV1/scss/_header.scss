@@ -1,44 +1,49 @@
 header.site-header{
     /* temporary */
-    background-image: url("https://rabbitbox.files.wordpress.com/2012/11/background-wide-wallpaper-1920x1080-005.jpg");
 
     nav{
         background-color: transparent;
         border-color: transparent;
-        div.menu-primary-menu-links-container{
-            
-            @extend .navbar-collapse; 
-            @extend .collapse;
-            @extend .col-md-10;
-            ul{
-                @extend .nav;
-                @extend .navbar-nav;
-                li{
-                    a{
-                        color: $c-white-trans;
-                        transition:.5s;
-                        transition:color .1s ease-in;
-                        &:hover{
-                            background-color: transparent;
-                            color: white;
+        div.container{
+            position: relative;
+            div.menu-primary-menu-links-container{
+                
+                @extend .navbar-collapse; 
+                @extend .collapse;
+                ul{
+                    @extend .nav;
+                    @extend .navbar-nav;
+                    li{
+                        a{
+                            color: $c-white-trans;
+                            transition:.5s;
+                            transition:color .1s ease-in;
+                            &:hover{
+                                background-color: transparent;
+                                color: white;
+                            }
                         }
+                    
                     }
-                   
                 }
             }
-        }
-        div.social-media{
-            @extend .col-md-2;
-            ul{
-                li{
-                    a{
-                        padding: 0;
-                        color: $c-white-trans;
-                        transition:.5s;
-                        transition:color .1s ease-in;
-                        &:hover{
-                            background-color: transparent;
-                            color: white;
+            div.social-media{
+                position: absolute;
+                right: $gutter*2;
+                top: 18px;
+                ul{
+                    li{
+                        a{
+                            padding: 0;
+                            color: $c-white-trans;
+                            transition:.5s;
+                            transition:color .1s ease-in;
+                            font-size: 24px;
+                            padding-right: 15px;
+                            &:hover{
+                                background-color: transparent;
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -59,6 +64,10 @@ header.site-header{
         .site-description{
             /* Center the description */
             text-align: center;
+            font-family: $f-title;
+            color: white;
+            font-size: 28px;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
         }
     }
 }
