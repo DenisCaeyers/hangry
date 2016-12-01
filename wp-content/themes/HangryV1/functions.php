@@ -31,6 +31,7 @@ function hangryv1_setup(){
     add_theme_support('post-thumbnails');
     add_image_size('small-thumb', 180, 120, true);
     add_image_size('banner-image', 920, 210, true);
+    add_image_size('cover-image', 650, 400, true);
 }
 add_action('after_setup_theme','hangryv1_setup')
 
