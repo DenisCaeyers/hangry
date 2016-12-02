@@ -2,3 +2,23 @@
     display: block;
     margin: 0 auto;
 }
+
+@mixin bg-acc-1{
+    background-color: $c-accent-1;
+}
+
+@mixin bg-acc-2{
+    background-color: $c-accent-2;
+}
+
+@mixin bg-acc-3{
+    background-color: $c-accent-3;
+}
+
+@mixin bg-acc-4{
+    background-color: $c-accent-4;
+}
+
+@mixin bg-acc-5{
+    background-color: $c-accent-5;
+}

@@ -14,19 +14,27 @@ $toprowPosts = new WP_Query('posts_per_page=5');
         <?php
             if ($i == 0) {
             ?> 
-                <div class="row top-row bottom-buffer"> <!-- start first row -->
+                <div class="row top-row"> <!-- start first row -->
                     <div class="col-md-8">
                         <a href="<?php the_permalink(); ?>">
                             <div class="post-cover">
                                 <div class="post">
-                                    <?php the_title();?>
                                 </div>
                                 <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-image");?>)'>
                                 </div>
                             </div>
                         </a>
                     </div>
-            <?php
+                    <div class="col-md-4 text-content content-box-1">
+                         <a href="<?php the_permalink(); ?>">
+                            <div class="text-content">
+                                <h1><?php the_title();?></h1>
+                                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+           <?php
             } elseif ($i == 1) {
             ?> 
                     <div class="col-md-4">
