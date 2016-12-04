@@ -1,9 +1,35 @@
 header.site-header{
     /* temporary */
 
+    .nav::after, .nav::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+        height: 0px;
+        width: 0px;
+        border: 23px solid $c-accent-2;;
+        z-index: -1;
+    }
+ 
+    /* The left ribbon */
+    .nav::before {
+        border-left-color: transparent;
+        left: -30px;
+    }
+ 
+    /* The right ribbon */
+    .nav::after {
+        border-right-color: transparent;
+        right: -30px;
+    }
     nav{
         background-color: transparent;
         border-color: transparent;
+        background-color: $c-accent-2;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
         div.container{
             position: relative;
             div.menu-primary-menu-links-container{
@@ -13,15 +39,28 @@ header.site-header{
                 ul{
                     @extend .nav;
                     @extend .navbar-nav;
+                    
                     li{
                         a{
-                            color: $c-white-trans;
+                            color:$c-accent-3;
                             transition:.5s;
                             transition:color .1s ease-in;
                             &:hover{
                                 background-color: transparent;
-                                color: white;
+                                color:white;
                             }
+                            font-family: $f-title;
+                            font-size: 18px;
+
+                            text-decoration: none;
+                            color: #fff;
+                            text-shadow: 1px 2px rgba(0, 0, 0, .2);
+                        
+                            -webkit-transition: color .3s linear;
+                            -moz-transition: color .3s linear;
+                                -o-transition: color .3s linear;
+                                -ms-transition: color .3s linear;
+                                    transition: color .3s linear;
                         }
                     
                     }
@@ -30,12 +69,12 @@ header.site-header{
             div.social-media{
                 position: absolute;
                 right: $gutter*2;
-                top: 18px;
+                top: 15px;
                 ul{
                     li{
                         a{
                             padding: 0;
-                            color: $c-white-trans;
+                            color:$c-accent-3;
                             transition:.5s;
                             transition:color .1s ease-in;
                             font-size: 24px;
@@ -53,8 +92,8 @@ header.site-header{
 
     div.header-content-wrapper{
         @extend .row;
-        padding-top: $gutter*6;
-        padding-bottom: $gutter*6;
+        padding-top: $gutter*2;
+        padding-bottom: $gutter*2;
         a.custom-logo-link{
             img.custom-logo{
                 /* Center the logo */
@@ -71,3 +110,4 @@ header.site-header{
         }
     }
 }
+

@@ -5776,26 +5776,53 @@ button.close {
     display: none !important; } }
 
 header.site-header {
-  /* temporary */ }
+  /* temporary */
+  /* The left ribbon */
+  /* The right ribbon */ }
+  header.site-header .nav::after, header.site-header nav div.container div.menu-primary-menu-links-container ul::after, header.site-header .nav::before, header.site-header nav div.container div.menu-primary-menu-links-container ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    height: 0px;
+    width: 0px;
+    border: 23px solid #a11b17;
+    z-index: -1; }
+  header.site-header .nav::before, header.site-header nav div.container div.menu-primary-menu-links-container ul::before {
+    border-left-color: transparent;
+    left: -30px; }
+  header.site-header .nav::after, header.site-header nav div.container div.menu-primary-menu-links-container ul::after {
+    border-right-color: transparent;
+    right: -30px; }
   header.site-header nav {
     background-color: transparent;
-    border-color: transparent; }
+    border-color: transparent;
+    background-color: #a11b17;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
     header.site-header nav div.container {
       position: relative; }
       header.site-header nav div.container div.menu-primary-menu-links-container ul li a {
-        color: rgba(255, 255, 255, 0.7);
+        color: #E7E0D0;
         transition: .5s;
-        transition: color .1s ease-in; }
+        transition: color .1s ease-in;
+        font-family: "Oleo Script", cursive;
+        font-size: 18px;
+        text-decoration: none;
+        color: #fff;
+        text-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+        transition: color .3s linear; }
         header.site-header nav div.container div.menu-primary-menu-links-container ul li a:hover {
           background-color: transparent;
           color: white; }
       header.site-header nav div.container div.social-media {
         position: absolute;
         right: 30px;
-        top: 18px; }
+        top: 15px; }
         header.site-header nav div.container div.social-media ul li a {
           padding: 0;
-          color: rgba(255, 255, 255, 0.7);
+          color: #E7E0D0;
           transition: .5s;
           transition: color .1s ease-in;
           font-size: 24px;
@@ -5804,8 +5831,8 @@ header.site-header {
             background-color: transparent;
             color: white; }
   header.site-header div.header-content-wrapper {
-    padding-top: 90px;
-    padding-bottom: 90px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
     header.site-header div.header-content-wrapper a.custom-logo-link img.custom-logo {
       /* Center the logo */
       display: block;
@@ -5819,10 +5846,13 @@ header.site-header {
       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); }
 
 body {
-  background: #E7E0D0; }
+  background: #E7E0D0;
+  font-family: "Open Sans", sans-serif;
+  background: #997d3c;
+  background-image: url("img/zenbg-1.png"), url("img/zenbg-2.png");
+  background-repeat: repeat-x, repeat; }
   body #content {
-    background-color: white;
-    margin-top: -30px; }
+    background-color: white; }
     body #content article.post h2 {
       font-family: "Oleo Script", cursive; }
     body #content article.single h1 {
@@ -5832,7 +5862,7 @@ body {
     body #content div.home-content div.post-cover {
       padding: 5px;
       background-color: lightgray;
-      min-height: 500px;
+      min-height: 600px;
       position: relative;
       overflow: hidden; }
     body #content div.home-content div.post {
@@ -5889,10 +5919,6 @@ body {
       body #content div.home-content .content-box-1 h1 {
         color: #E7E0D0;
         border-bottom: 4px dotted #a11b17; }
-
-body {
-  font-family: arial;
-  font-size: 14px; }
 
 a:link, a:visited {
   color: #30564d; }

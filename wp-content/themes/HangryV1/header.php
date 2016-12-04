@@ -14,37 +14,6 @@
 <body <?php body_class(); ?>>
 
         <header class="site-header clearfix">
-            
-            <nav class="navbar navbar-default navbar-fixed-top" data-0="background-color:rgba(0,0,0,0.2);" data-100="background-color:rgba(0,0,0,0.7);">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-                <?php 
-                // Fix menu overlap
-                if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>'; 
-                ?>
-                <div class="container">
-                    <?php 
-                    $args= array(
-                        'theme_location' => 'primary'
-                    );
-                    
-                    ?>
-                    <?php wp_nav_menu($args); ?>
-                    <div class="social-media">
-                        <ul class="nav navbar-nav navbar-right social-media">
-                            <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
-                            <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
-                            <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
-                            <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
             <div class="container">
                 <div class="header-content-wrapper">
                     <div class="site-logo col-md-12">
@@ -60,9 +29,42 @@
                             }
                         ?>
                     </div>
-                    <div class="site-description col-md-12"><?php bloginfo('description'); ?></div>
-
+                    <div class="site-description col-md-12"><?php bloginfo('description'); ?>
                     </div>
                 </div>
+            </div>
+            <div class="container">
+                <nav class="navbar navbar-default">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <?php 
+                    // Fix menu overlap
+                    if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>'; 
+                    ?>
+                    <div class="container">
+                        <?php 
+                        $args= array(
+                            'theme_location' => 'primary'
+                        );
+                        
+                        ?>
+                        <?php wp_nav_menu($args); ?>
+                        <div class="social-media">
+                            <ul class="nav navbar-nav navbar-right social-media">
+                                <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
+                                <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
+                                <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            
         </header>
         <div id="content" class="container">
