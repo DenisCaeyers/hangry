@@ -1,13 +1,9 @@
 body{
-    background: $c-accent-3;
+
     font-family: $f-body;
-    background: #997d3c;
-    background-image: url("img/zenbg-1.png"), url("img/zenbg-2.png");
-    background-repeat: repeat-x, repeat;
     #content{
         background-color: white;
         //box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.1);
-
         article.post{
             h2{
                 font-family: $f-title;
@@ -25,34 +21,85 @@ body{
             }
         }
         div.home-content{
-            .bottom-buffer { 
-                margin-bottom:30px; 
-            }
-
-            .content-box-1{
-
-            }
-
             div.post-cover{
                 padding: 5px;
                 background-color: lightgray;
-                min-height: 600px;
+                min-height: 700px;
                 position: relative;
                 overflow: hidden;
             }
+            .dark{
+                    background-color: rgba(0,0,0,0.3);
+            }
+
             div.post{
+                @extend .container;
+            }
+            div.post, div.small-post{
                 z-index: 10;
                 position: absolute;
                 display: block;
                 left: 0;
                 right: 0;
                 bottom: 0;
-                padding: 15px;
                 color: white;
                 text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
                 font-family: $f-title;
                 font-size: 32px;
+                .hero-container{
+                    background-color: rgba(0,0,0,0.9);
+                    width: 50%;
+                    padding: $gutter*3;
+                    height: 300px;
+                    display: flex;
+                    text-align: center;
+                    .inner{
+                        padding: $gutter;
+                        border-top: 2px solid white;
+                        border-bottom: 2px solid white;
+                        width: 100%;
+                        h1{
+                            font-size: 48px;
+                        }
+                        span.post-category{
+                            padding-left: $gutter;
+                            padding-right: $gutter;
+                            font-size: 24px;
+                        }
+                    }
+                    
+                }
             }
+
+            div.small-post{
+                top: 0;
+                padding: $gutter*2;
+                display: flex;
+                text-align: center;
+                transition: padding 0.2s ease-in-out;
+                
+                div.inner{
+                    padding: $gutter;
+                    border-top: 2px solid white;
+                    border-bottom: 2px solid white;
+                    width: 100%;
+                    h1{
+                        font-size: 42px;
+                    }
+                    span.post-category{
+                        padding-left: $gutter;
+                        padding-right: $gutter;
+                    }
+                }
+                &:hover{
+                    padding: $gutter;
+                }
+                h3{
+                    font-size: 32px;
+                    border-bottom: 5px $c-accent-2 dotted;
+                }
+            }
+
             div.img-cover{
                 width: 100%;
                 height: 100%;
@@ -71,11 +118,27 @@ body{
             div.top-row{
                 display: flex;
             }
+            div.container-center{
+                @include angle(after,true);
+                background-color: white;
+            }
             div.mid-row{
+                margin-left:$gutter-n*3;
+                margin-right:$gutter-n*3;
+                .col-md-4{
+                    padding: $gutter*3;
+                }
                 div.post-cover{
-                    min-height: 200px;
+                    min-height: 300px;
                 }
             }
+            div.mid-row1{
+                padding-top: $gutter*3;
+            }
+            div.mid-row2{
+                padding-bottom: $gutter*3;
+            }
+
             div.text-content{
                 padding: $gutter;
                 display: flex;
@@ -87,16 +150,68 @@ body{
                     }
                 }
 
-            }
-            .content-box-1{
-                @include bg-acc-1;
-                h1{
-                    color: $c-accent-3;
-                    border-bottom: 4px dotted $c-accent-2;
-                };
+            }       
+        }
+        div.about{
+            background-color: $c-accent-3;
+            @extend .clearfix;
+            div.about-row{
+                padding-top: $gutter*3;
+                padding-bottom: $gutter*3;
+                margin-left: $gutter-n*3;
+                margin-right: $gutter-n*3;
+                display: flex;
+                .col-md-4{
+                    padding: $gutter*3;
+                    .text, .image,.dmnfine{
+                        border-top: 2px solid black;
+                    }
+                    .text{
+                        font-family: $f-title;
+                        text-align: center;
+                        .title{
+                            font-size: 48px;
+                        }
+                        .under{
+                            font-size: 18px;
+                            font-style: italic;
+                        }
+                        p{
+                            padding-top: $gutter;
+                            font-size: 18px;
+                        }
+
+                    }
+                    .dmnfine{
+                        font-family: $f-title;
+                        font-size: 32px;
+                        text-align: center;
+                        span.text{
+                            margin-left: $gutter;
+                            margin-right: $gutter;
+                            border-top: 0;
+                        }
+                        p{
+                            padding-top: $gutter;
+                            font-size: 18px;
+                        }
+                        div.logo{
+                            background-image: url('img/damnfine.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                            min-height: 200px;
+                        }
+                        a:link,a:visited,a:hover{
+                            text-decoration: none;
+                            color: $c-accent-4;
+                        }
+                    }
+                }
             }
             
         }
+
     }
 
 }

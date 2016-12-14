@@ -1,0 +1,31 @@
+article.single{
+    @extend .container;
+    padding-top: $gutter*9;
+    font-size: 16px;
+    div.row{
+        display: flex;
+        div.left, div.right{
+            padding: $gutter*3;
+        }
+        div.left{
+            background-color: $c-accent-3;
+            text-align: right;
+            position: relative;
+            h1{
+                text-transform: uppercase;
+                font-size: 72px;
+                float: left;
+            }
+            span.post-category{
+                padding-left: $gutter;
+                padding-right: $gutter;
+                font-size: 24px;
+                text-transform: uppercase;
+                font-family: $f-title;
+            }
+        }
+        div.right{
+
+        }
+    }
+}

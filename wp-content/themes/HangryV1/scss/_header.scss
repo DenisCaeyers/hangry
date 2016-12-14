@@ -1,93 +1,164 @@
 header.site-header{
     /* temporary */
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,1);
 
-    .nav::after, .nav::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 6px;
-        height: 0px;
-        width: 0px;
-        border: 23px solid $c-accent-2;;
-        z-index: -1;
-    }
- 
-    /* The left ribbon */
-    .nav::before {
-        border-left-color: transparent;
-        left: -30px;
-    }
- 
-    /* The right ribbon */
-    .nav::after {
-        border-right-color: transparent;
-        right: -30px;
-    }
-    nav{
-        background-color: transparent;
+     nav{
+        background-color:#0D0B0D;
         border-color: transparent;
-        background-color: $c-accent-2;
         margin-bottom: 0px;
         border-radius: 0px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
-        div.container{
-            position: relative;
-            div.menu-primary-menu-links-container{
-                
-                @extend .navbar-collapse; 
-                @extend .collapse;
-                ul{
-                    @extend .nav;
-                    @extend .navbar-nav;
-                    
-                    li{
-                        a{
-                            color:$c-accent-3;
-                            transition:.5s;
-                            transition:color .1s ease-in;
-                            &:hover{
-                                background-color: transparent;
-                                color:white;
-                            }
-                            font-family: $f-title;
-                            font-size: 18px;
+        box-shadow: 0 1px 5px rgba(0,0, 0, 0.8);
+        border-bottom:white 1px;
+        border-bottom-style: SOLID;
+        padding: $gutter;
 
-                            text-decoration: none;
-                            color: #fff;
-                            text-shadow: 1px 2px rgba(0, 0, 0, .2);
-                        
-                            -webkit-transition: color .3s linear;
-                            -moz-transition: color .3s linear;
-                                -o-transition: color .3s linear;
-                                -ms-transition: color .3s linear;
-                                    transition: color .3s linear;
-                        }
-                    
-                    }
+        ul.sub-nav{
+            li a{
+                font-family: $f-title !important;
+                font-size: 14px;
+                transition:color .1s ease-in;
+                position: relative;
+                text-decoration: none;
+                display: inline-block;
+                transition: 0.1s ease;
+                text-transform: uppercase;
+
+
+                &:hover{
+                    color: white;
+                    /*border-bottom: 3px solid white;*/
+                }
+                &:after{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: transparent;
+                    transition: width .5s ease, background-color .5s ease;
+                }
+                &:hover:after {
+                    width: 100%;
+                    background: white;
                 }
             }
-            div.social-media{
-                position: absolute;
-                right: $gutter*2;
-                top: 15px;
-                ul{
-                    li{
-                        a{
+        }
+        ul.left-nav{
+            li a{
+                text-align: right;
+                margin-left: $gutter*5;
+            }
+        }
+         ul.right-nav{
+            li a{
+                text-align: left;
+                margin-right: $gutter*5;
+            }
+        }
+        
+        a.navbar-brand{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            margin: auto;
+            margin-top: -30px;
+            
+            div.diamond{
+                display: block;
+                color: white;
+                margin: auto;
+                width: 200px;
+                height: 180px;
+                padding: 15px;
+                position: relative;
+                background-color: white;
+                box-shadow: 0 1px 5px rgba(0,0, 0, 0.8);
+                &:after{
+                    content: "";
+                    border-style: solid;
+                    border-width: 0;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    border-color: white transparent;
+                    bottom: -25px;
+                    border-width: 25px 100px 0 100px;
+                    left: 0;
+                }
+                img.hangry-logo{
+                    width: 175px;
+                    height: 145px;
+                }
+            }
+        }
+
+        .navbar-toggle {
+            z-index:3;
+        }
+    }
+    .subheader{
+         width: 100%;
+         position: fixed;
+         z-index:11;
+         background-color:rgba(0,0,0,0.4);
+         padding: $gutter;
+         @extend .clearfix;
+         .left{
+             float: left;
+             ul.social-media{
+                 padding: 0;
+                 margin-bottom: 0;
+                 li{
+                     list-style: none;
+                     float: left;
+                     a{
                             padding: 0;
-                            color:$c-accent-3;
+                            color:rgba(255,255,255,1);
                             transition:.5s;
                             transition:color .1s ease-in;
                             font-size: 24px;
+                            line-height: 24px;
                             padding-right: 15px;
                             &:hover{
                                 background-color: transparent;
                                 color: white;
                             }
                         }
-                    }
+                 }
+             }
+         }
+         .right{
+             float: right;
+             label{
+                 display: none;
+             }
+             input[type=text]{
+                border: none;
+                background: transparent;
+                border-bottom: white 2px solid;
+                color:white;
+                &:focus{
+                    border: 2px solid white;
+                    outline:0px;
                 }
-            }
-        }
+             }
+             input[type=submit]{
+                 color: black;
+                 background-color: white;
+                 font-family: $f-title;
+                 border: 3px solid white;
+                 text-transform: uppercase;
+                 outline:0px;
+                 &:active{
+                    color:white;
+                    background-color:black;
+                    border: 3px solid black;
+                    outline:0px;
+                 }
+             }
+
+         }
     }
 
     div.header-content-wrapper{

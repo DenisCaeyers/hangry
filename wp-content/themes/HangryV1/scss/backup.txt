@@ -1,0 +1,15 @@
+Oude menu:
+
+                     <?php 
+                    // Fix menu overlap
+                    if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>'; 
+                    ?>
+                    <div class="container">
+                        <?php 
+                        $args= array(
+                            'theme_location' => 'primary'
+                        );
+                        
+                        ?>
+                        <?php wp_nav_menu($args); ?>
+                    </div>

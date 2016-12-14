@@ -28,10 +28,18 @@ function hangryv1_setup(){
         'footer' => __('Footer Menu'),
     ));
 
+    add_theme_support( 'custom-logo', array(
+        'height'      => 100,
+        'width'       => 100,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ) );
+
     add_theme_support('post-thumbnails');
     add_image_size('small-thumb', 180, 120, true);
-    add_image_size('banner-image', 920, 210, true);
-    add_image_size('cover-image', 650, 400, true);
+    add_image_size('banner-image', 1140, 650, true);
+    add_image_size('cover-image', 1920, 600, true);
+    add_image_size('cover-secondrow',320,300,true);
 }
 add_action('after_setup_theme','hangryv1_setup')
 

@@ -11,35 +11,5 @@ Version: 1.0
 
 @import 'header';
 @import 'body';
-
-a:link,a:visited{
-    color:$c-accent-1;
-}
-
-p{
-    line-height: 1.65em;
-}
-
-div.container{
-    margin: 0 auto;
-}
-
-/*
-Header
-*/
-
-/*
-Article
-*/
-
-article.post{
-    border-bottom: 2px dotted lightcoral;
-}
-
-article.post:last-of-type{
-    border-bottom:none;
-}
-
-/*
-Navigation menus
-*/
+@import 'single';
+@import 'footer';

@@ -1,18 +1,7 @@
     </div>
     <footer class="site-footer">
         <div class="container">
-            <nav class="site-nav">
-                <?php 
-                    $args= array(
-                        'theme_location' => 'footer'
-                    );
-                    
-                    ?>
 
-                    <?php wp_nav_menu($args); ?>
-            </nav>
-
-            <p><?php bloginfo('name'); ?> - <?php echo date('Y'); ?></p>
         </div>
     </footer>
 

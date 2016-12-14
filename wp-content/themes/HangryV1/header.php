@@ -14,7 +14,74 @@
 <body <?php body_class(); ?>>
 
         <header class="site-header clearfix">
-            <div class="container">
+            
+             <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-0="padding:15px" data-100="padding:0px;"><
+                 <?php 
+                // Fix menu overlap
+                if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>'; 
+                ?>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="container">
+                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-0="margin-top:-50px" data-300="margin-top:-100px;">
+                            <div class="diamond">
+                            <?php	 
+                            if ( function_exists( 'the_custom_logo' ) ) {
+                                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                                $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                                echo "<img src='".$image[0]."' alt='Hangry' class='hangry-logo'>";
+                            }
+                            ?>
+                            </div>
+                        </a>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav navbar-left sub-nav left-nav">
+                        <li><a href="#">Alle Recepten</a></li>
+                        <li><a href="#">Basisrecepten</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right sub-nav right-nav">
+                        <li><a href="#">Link nog in te vullen</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <div class="subheader" data-0="top:104px;" data-100="top:0px;">
+                    <div class="container">
+                        <div class="left">
+                            <div class="social-media">
+                                <ul class="social-media">
+                                    <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
+                                    <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
+                                    <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
+                                    <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <?php get_search_form(); ?>
+                        </div>
+                    </div>
+            </div>
+           
+             <div class="social-media">
+                    <ul class="nav navbar-nav navbar-right social-media">
+                        <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
+                        <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            <div class="container" style="display:none">
                 <div class="header-content-wrapper">
                     <div class="site-logo col-md-12">
                         <?php
@@ -34,37 +101,9 @@
                 </div>
             </div>
             <div class="container">
-                <nav class="navbar navbar-default">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                    <?php 
-                    // Fix menu overlap
-                    if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>'; 
-                    ?>
-                    <div class="container">
-                        <?php 
-                        $args= array(
-                            'theme_location' => 'primary'
-                        );
-                        
-                        ?>
-                        <?php wp_nav_menu($args); ?>
-                        <div class="social-media">
-                            <ul class="nav navbar-nav navbar-right social-media">
-                                <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
-                                <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
-                                <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
-                                <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+               
             </div>
 
             
         </header>
-        <div id="content" class="container">
+        <div id="content">

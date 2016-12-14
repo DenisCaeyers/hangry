@@ -3,9 +3,9 @@
 get_header();
 
 
-$toprowPosts = new WP_Query('posts_per_page=5');
+$toprowPosts = new WP_Query('posts_per_page=7');
 ?>
-<div class="home-content">
+<div class="home-content"> <!-- Start Home Content -->
     <?php
     if($toprowPosts->have_posts()) :
         $i = 0;
@@ -15,21 +15,23 @@ $toprowPosts = new WP_Query('posts_per_page=5');
             if ($i == 0) {
             ?> 
                 <div class="row top-row"> <!-- start first row -->
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <a href="<?php the_permalink(); ?>">
                             <div class="post-cover">
                                 <div class="post">
+                                    <div class="hero-container">
+                                        <div class="inner">
+                                            <h1><?php the_title();?></h1>
+                                            <?php
+                                                $cat1 = get_the_category(); 
+                                            ?>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $cat1[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
-                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-image");?>)'>
+                                <div class="img-cover" style='background-image:url(<?php the_post_thumbnail_url("cover-image");?>)'>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 text-content content-box-1">
-                         <a href="<?php the_permalink(); ?>">
-                            <div class="text-content">
-                                <h1><?php the_title();?></h1>
-                                
                             </div>
                         </a>
                     </div>
@@ -37,67 +39,137 @@ $toprowPosts = new WP_Query('posts_per_page=5');
            <?php
             } elseif ($i == 1) {
             ?> 
-                    <div class="col-md-4">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="post-cover">
-                                <div class="post">
-                                    <?php the_title();?>
+            <div class="container-center"><!-- Start Container Center -->
+                <div class="container"><!-- Start Container -->
+                    <div class="row mid-row mid-row1"> <!-- Start mid-row -->
+                        <div class="col-md-4">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="post-cover">
+                                    <div class="small-post dark">
+                                        <div class="inner">
+                                            <h1><?php the_title();?></h1>
+                                            <?php
+                                                $cat2 = get_the_category(); 
+                                            ?>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $cat2[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>                                       
+                                        </div>
+                                    </div>
+                                    <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-secondrow");?>)'>
+                                    </div>
                                 </div>
-                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-image");?>)'>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div><!-- end first row -->
+                            </a>
+                        </div>
             <?php
             } elseif ($i == 2) {
             ?> 
-                <div class="row mid-row"> <!-- start second row -->
                     <div class="col-md-4">
                         <a href="<?php the_permalink(); ?>">
                             <div class="post-cover">
-                                <div class="post">
-                                    <?php the_title();?>
+                                <div class="small-post dark">
+                                       <div class="inner">
+                                           <?php
+                                                $cat3 = get_the_category(); 
+                                            ?>
+                                            <h1><?php the_title();?></h1>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $cat3[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>                                       
+                                        </div>
                                 </div>
-                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-image");?>)'>
+                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-secondrow");?>)'>
                                 </div>
                             </div>
                         </a>
                     </div>
+                   
             <?php
             } elseif ($i == 3) {
              ?> 
                     <div class="col-md-4">
                         <a href="<?php the_permalink(); ?>">
                             <div class="post-cover">
-                                <div class="post">
-                                    <?php the_title();?>
+                                <div class="small-post dark">
+                                     <div class="inner">
+                                         <?php
+                                                $cat4 = get_the_category(); 
+                                            ?>
+                                            <h1><?php the_title();?></h1>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $cat4[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>                                       
+                                        </div>
                                 </div>
-                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-image");?>)'>
+                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-secondrow");?>)'>
                                 </div>
                             </div>
                         </a>
                     </div>
+                </div> <!-- End mid-row -->
+            </div> <!-- End Container -->
             <?php
             } elseif ($i == 4) {
-            ?> 
+             ?> 
+            <div class="container">
+                <div class="row mid-row mid-row2">   
                     <div class="col-md-4">
                         <a href="<?php the_permalink(); ?>">
                             <div class="post-cover">
-                                <div class="post">
-                                    <?php the_title();?>
+                                <div class="small-post dark">
+                                     <div class="inner">
+                                            <?php
+                                                $cat5 = get_the_category(); 
+                                            ?>
+                                            <h1><?php the_title();?></h1>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $cat5[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>                                       
+                                        </div>
                                 </div>
-                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-image");?>)'>
+                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-secondrow");?>)'>
                                 </div>
                             </div>
                         </a>
                     </div>
-                </div><!-- end second row -->
             <?php
-             }
-        ?>
+            } elseif ($i == 5) {
+             ?> 
+                    <div class="col-md-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="post-cover">
+                                <div class="small-post dark">
+                                      <div class="inner">
+                                            <?php
+                                                $cat6 = get_the_category(); 
+                                            ?>
+                                            <h1><?php the_title();?></h1>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $cat6[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>                                       
+                                        </div>
+                                </div>
+                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-secondrow");?>)'>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            <?php
+            } elseif ($i == 6) {
+             ?> 
+                    <div class="col-md-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="post-cover">
+                                <div class="small-post dark">
+                                        <div class="inner">
+                                            <?php
+                                                $cat6 = get_the_category(); 
+                                            ?>
+                                            <h1><?php the_title();?></h1>
+                                            <h5><i class="fa fa-star-o" aria-hidden="true"></i><span class="post-category"><?php echo $category[0]->cat_name; ?></span><i class="fa fa-star-o" aria-hidden="true"></i></h5>                                       
+                                        </div>
+                                </div>
+                                <div class="img-cover" style='background-image: url(<?php the_post_thumbnail_url("cover-secondrow");?>)'>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Container Center -->
         
         <?php 
+            }
         $i++;
         endwhile;
         
@@ -105,8 +177,33 @@ $toprowPosts = new WP_Query('posts_per_page=5');
             echo '<p> No content found </p>';
         endif;
     ?>
-
-</div>
+     <div class="about"><!-- Start About -->
+        <div class="container"><!-- Start About Container -->
+            <div class="row about-row"><!-- Start About Row -->
+                <div class="col-md-4">
+                    <div class="text">
+                        <div class="title">Han&bull;gry</div>
+                        <div class="under">(han-gree) adj.</div> 
+                        <p>When you're so hungry, you get a little bit angry.</p>
+                        <h3>En wij willen daar van af!</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="image"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dmnfine">
+                        <a href="https://www.facebook.com/DamnFineDesigns2016" target="_blank">
+                            <i class="fa fa-star-o" aria-hidden="true"></i><span class="text">Special Thanks</span><i class="fa fa-star-o" aria-hidden="true"></i>
+                            <p>for designing our awesome logo.</p>
+                            <div class="logo"></div>
+                        </a>
+                    </div>
+                </div>
+            </div><!-- Start About Row -->
+        </div><!-- End About Container -->
+    </div><!-- End About -->
+</div><!-- End Home Content -->
 
 <?php
 get_footer();

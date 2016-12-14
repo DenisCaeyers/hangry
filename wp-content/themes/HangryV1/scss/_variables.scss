@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 /* Colors */
 $c-accent-1: rgb(48,86,77);
 $c-accent-2: rgb(161,27,23);
@@ -10,9 +11,10 @@ $c-white-trans: rgba(255,255,255,0.7);
 
 /* Spacing */
 $gutter: 15px;
+$gutter-n: -15px;
 
 /* Fonts */
-$f-title: 'Oleo Script', cursive;
+$f-title: 'Oswald', cursive;
 $f-body: 'Open Sans', sans-serif;
 
 h1,h2,h3{
