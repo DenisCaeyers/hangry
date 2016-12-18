@@ -13,13 +13,30 @@
 
 <body <?php body_class(); ?>>
         <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8&appId=146696435385967";
-            fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8&appId=146696435385967";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <script>
+            $(function () {
+                // initialize skrollr if the window width is large enough
+                if ($(window).width() > 767) {
+                    skrollr.init(yourOptions);
+                }
+
+                // disable skrollr if the window is resized below 768px wide
+                $(window).on('resize', function () {
+                    if ($(window).width() <= 767) {
+                    skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+                    }
+                });
+            });
+        </script>
+
 
         <header class="site-header clearfix">
             
@@ -48,8 +65,9 @@
                             ?>
                             </div>
                         </a>
+                        <div class="mobile-logo"></div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <div class="collapse navbar-collapse" id="navbar">
                     
                     <ul class="nav navbar-nav navbar-left sub-nav left-nav">
                         <li><a href="#">Alle Recepten</a></li>
@@ -69,7 +87,7 @@
                             <div class="social-media">
                                 <ul class="social-media">
                                     <li class="facebook"><a href="https://www.facebook.com/Hangry.be/" target="_blank"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
-                                    <li class="twitter"><a href="https://twitter.com/Hangry_dot_be"" target="_blank"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
+                                    <li class="twitter"><a href="https://twitter.com/Hangry_dot_be" target="_blank"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
                                     <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
                                     <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
                                 </ul>
@@ -80,15 +98,6 @@
                         </div>
                     </div>
             </div>
-           
-             <div class="social-media">
-                    <ul class="nav navbar-nav navbar-right social-media">
-                        <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
-                        <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
-                        <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
-                        <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
             <div class="container" style="display:none">
                 <div class="header-content-wrapper">
                     <div class="site-logo col-md-12">

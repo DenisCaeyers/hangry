@@ -9,8 +9,20 @@ header.site-header{
         border-radius: 0px;
         box-shadow: 0 1px 5px rgba(0,0, 0, 0.8);
         border-bottom:white 1px;
-        border-bottom-style: SOLID;
+        border-bottom-style: solid;
         padding: $gutter;
+
+        button.navbar-toggle{
+            .icon-bar{
+                background-color: white;
+            }
+            &:hover{
+                background-color: transparent;
+            }
+            &:focus{
+                background-color: transparent;
+            }
+        }
 
         ul.sub-nav{
             li a{
@@ -22,8 +34,6 @@ header.site-header{
                 display: inline-block;
                 transition: 0.1s ease;
                 text-transform: uppercase;
-
-
                 &:hover{
                     color: white;
                     /*border-bottom: 3px solid white;*/
@@ -43,19 +53,43 @@ header.site-header{
             }
         }
         ul.left-nav{
-            li a{
-                text-align: right;
-                margin-left: $gutter*5;
+            li a{     
+                @media (min-width: 992px) { 
+                    text-align: right;
+                }
             }
         }
          ul.right-nav{
             li a{
-                text-align: left;
-                margin-right: $gutter*5;
+                @media (min-width: 992px) { 
+                    text-align: left;
+                }
             }
         }
-        
+        div.mobile-logo{
+            @media (min-width: 992px) { 
+               display: none;
+            }
+            background-image: url('img/logo_wit.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 75px;
+            width: 75px;
+            position: absolute;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 10px;
+        }
         a.navbar-brand{
+            display: none;
+            @media (min-width: 992px) { 
+                display: block;
+            }
+
             position: absolute;
             width: 100%;
             left: 0;

@@ -32,10 +32,13 @@ body{
                 font-size: 32px;
                 .hero-container{
                     background-color: rgba(0,0,0,0.9);
-                    width: 50%;
+                    width: 100%;
+                    @media (min-width: 992px) { 
+                        width: 50%;
+                    }
                     padding: $gutter*3;
                     height: 300px;
-                    display: flex;
+                   
                     text-align: center;
                     .inner{
                         padding: $gutter;
@@ -101,14 +104,20 @@ body{
             }
             div.top-row{
                 display: flex;
+                div.col-md-12{
+                    width: 100%;
+                }
+                
             }
             div.container-center{
                 @include angle(after,true);
                 background-color: white;
             }
             div.general-row{
-                margin-left:$gutter-n*3;
-                margin-right:$gutter-n*3;
+                @media (min-width: 992px) { 
+                    margin-left: $gutter-n*3;
+                    margin-right: $gutter-n*3;
+                }
                 div.col-md-8{
                     padding-left:$gutter*3;
                     padding-right: $gutter*3;
@@ -131,8 +140,8 @@ body{
                 }
                 div.col-md-4{
                     padding-top: $gutter*6;
-                    padding-left:$gutter*3;
                     padding-right: $gutter*3;
+                    padding-left:$gutter*3;
                     #fb-addin{
                         margin-bottom: $gutter*3;
                     }
@@ -159,10 +168,12 @@ body{
             div.about-row{
                 padding-top: $gutter*3;
                 padding-bottom: $gutter*3;
-                margin-left: $gutter-n*3;
-                margin-right: $gutter-n*3;
-                display: flex;
-                .col-md-4{
+                @media (min-width: 992px) { 
+                    margin-left: $gutter-n*3;
+                    margin-right: $gutter-n*3;
+                }
+                display:block;
+                .col-lg-4{
                     padding: $gutter*3;
                     .text{
                         font-family: $f-title;

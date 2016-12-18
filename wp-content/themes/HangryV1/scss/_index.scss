@@ -48,8 +48,10 @@ div.spacer{
         }
     }
     div.row{
-        margin-left:$gutter-n*3;
-        margin-right:$gutter-n*3;
+        @media (min-width: 992px) { 
+            margin-left: $gutter-n*3;
+            margin-right: $gutter-n*3;
+        }
         .col-md-6{
             padding: $gutter*3;
             a{

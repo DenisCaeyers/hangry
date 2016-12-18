@@ -2,8 +2,15 @@ article.single{
     @extend .container;
     padding-top: $gutter*9;
     font-size: 16px;
+    figure{
+        img{
+            @extend .img-responsive;
+        }
+    }
     div.row{
-        display: flex;
+        @media (min-width: 992px) { 
+            display: flex;
+        }
         div.left, div.right{
             padding: $gutter*3;
         }

@@ -1255,7 +1255,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive {
+.img-responsive, article.single figure img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -5934,8 +5934,14 @@ header.site-header {
     border-radius: 0px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
     border-bottom: white 1px;
-    border-bottom-style: SOLID;
+    border-bottom-style: solid;
     padding: 15px; }
+    header.site-header nav button.navbar-toggle .icon-bar {
+      background-color: white; }
+    header.site-header nav button.navbar-toggle:hover {
+      background-color: transparent; }
+    header.site-header nav button.navbar-toggle:focus {
+      background-color: transparent; }
     header.site-header nav ul.sub-nav li a {
       font-family: "Oswald", cursive !important;
       font-size: 14px;
@@ -5958,13 +5964,31 @@ header.site-header {
       header.site-header nav ul.sub-nav li a:hover:after {
         width: 100%;
         background: white; }
-    header.site-header nav ul.left-nav li a {
-      text-align: right;
-      margin-left: 75px; }
-    header.site-header nav ul.right-nav li a {
-      text-align: left;
-      margin-right: 75px; }
+    @media (min-width: 992px) {
+      header.site-header nav ul.left-nav li a {
+        text-align: right; } }
+    @media (min-width: 992px) {
+      header.site-header nav ul.right-nav li a {
+        text-align: left; } }
+    header.site-header nav div.mobile-logo {
+      background-image: url("img/logo_wit.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 75px;
+      width: 75px;
+      position: absolute;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 10px; }
+      @media (min-width: 992px) {
+        header.site-header nav div.mobile-logo {
+          display: none; } }
     header.site-header nav a.navbar-brand {
+      display: none;
       position: absolute;
       width: 100%;
       left: 0;
@@ -5972,6 +5996,9 @@ header.site-header {
       text-align: center;
       margin: auto;
       margin-top: -30px; }
+      @media (min-width: 992px) {
+        header.site-header nav a.navbar-brand {
+          display: block; } }
       header.site-header nav a.navbar-brand div.diamond {
         display: block;
         color: white;
@@ -6087,13 +6114,13 @@ body {
       font-size: 32px; }
       body #content div.home-content div.post .hero-container, body #content div.home-content div.small-post .hero-container {
         background-color: rgba(0, 0, 0, 0.9);
-        width: 50%;
+        width: 100%;
         padding: 45px;
         height: 300px;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
         text-align: center; }
+        @media (min-width: 992px) {
+          body #content div.home-content div.post .hero-container, body #content div.home-content div.small-post .hero-container {
+            width: 50%; } }
         body #content div.home-content div.post .hero-container .inner, body #content div.home-content div.small-post .hero-container .inner {
           padding: 15px;
           border-top: 2px solid white;
@@ -6151,6 +6178,8 @@ body {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
+      body #content div.home-content div.top-row div.col-md-12 {
+        width: 100%; }
     body #content div.home-content div.container-center {
       position: relative;
       z-index: 1;
@@ -6173,29 +6202,30 @@ body {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
         transform-origin: 0 100%; }
-    body #content div.home-content div.general-row {
-      margin-left: -45px;
-      margin-right: -45px; }
-      body #content div.home-content div.general-row div.col-md-8 {
-        padding-left: 45px;
-        padding-right: 45px; }
-        body #content div.home-content div.general-row div.col-md-8 div.mid-row {
-          margin-left: -45px;
-          margin-right: -45px; }
-          body #content div.home-content div.general-row div.col-md-8 div.mid-row .col-md-6 {
-            padding: 45px; }
-          body #content div.home-content div.general-row div.col-md-8 div.mid-row div.post-cover {
-            min-height: 300px; }
-        body #content div.home-content div.general-row div.col-md-8 div.mid-row1 {
-          padding-top: 45px; }
-        body #content div.home-content div.general-row div.col-md-8 div.mid-row3 {
-          padding-bottom: 45px; }
-      body #content div.home-content div.general-row div.col-md-4 {
-        padding-top: 90px;
-        padding-left: 45px;
-        padding-right: 45px; }
-        body #content div.home-content div.general-row div.col-md-4 #fb-addin {
-          margin-bottom: 45px; }
+    @media (min-width: 992px) {
+      body #content div.home-content div.general-row {
+        margin-left: -45px;
+        margin-right: -45px; } }
+    body #content div.home-content div.general-row div.col-md-8 {
+      padding-left: 45px;
+      padding-right: 45px; }
+      body #content div.home-content div.general-row div.col-md-8 div.mid-row {
+        margin-left: -45px;
+        margin-right: -45px; }
+        body #content div.home-content div.general-row div.col-md-8 div.mid-row .col-md-6 {
+          padding: 45px; }
+        body #content div.home-content div.general-row div.col-md-8 div.mid-row div.post-cover {
+          min-height: 300px; }
+      body #content div.home-content div.general-row div.col-md-8 div.mid-row1 {
+        padding-top: 45px; }
+      body #content div.home-content div.general-row div.col-md-8 div.mid-row3 {
+        padding-bottom: 45px; }
+    body #content div.home-content div.general-row div.col-md-4 {
+      padding-top: 90px;
+      padding-right: 45px;
+      padding-left: 45px; }
+      body #content div.home-content div.general-row div.col-md-4 #fb-addin {
+        margin-bottom: 45px; }
     body #content div.home-content div.text-content {
       padding: 15px;
       display: -webkit-flex;
@@ -6233,42 +6263,42 @@ body {
       body #content div.about div.about-row {
         padding-top: 45px;
         padding-bottom: 45px;
-        margin-left: -45px;
-        margin-right: -45px;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex; }
-        body #content div.about div.about-row .col-md-4 {
+        display: block; }
+        @media (min-width: 992px) {
+          body #content div.about div.about-row {
+            margin-left: -45px;
+            margin-right: -45px; } }
+        body #content div.about div.about-row .col-lg-4 {
           padding: 45px; }
-          body #content div.about div.about-row .col-md-4 .text {
+          body #content div.about div.about-row .col-lg-4 .text {
             font-family: "Oswald", cursive;
             text-align: center; }
-            body #content div.about div.about-row .col-md-4 .text .title {
+            body #content div.about div.about-row .col-lg-4 .text .title {
               font-size: 48px; }
-            body #content div.about div.about-row .col-md-4 .text .under {
+            body #content div.about div.about-row .col-lg-4 .text .under {
               font-size: 18px;
               font-style: italic; }
-            body #content div.about div.about-row .col-md-4 .text p {
+            body #content div.about div.about-row .col-lg-4 .text p {
               padding-top: 15px;
               font-size: 18px; }
-          body #content div.about div.about-row .col-md-4 .dmnfine {
+          body #content div.about div.about-row .col-lg-4 .dmnfine {
             font-family: "Oswald", cursive;
             font-size: 32px;
             text-align: center; }
-            body #content div.about div.about-row .col-md-4 .dmnfine span.text {
+            body #content div.about div.about-row .col-lg-4 .dmnfine span.text {
               margin-left: 15px;
               margin-right: 15px;
               border-top: 0; }
-            body #content div.about div.about-row .col-md-4 .dmnfine p {
+            body #content div.about div.about-row .col-lg-4 .dmnfine p {
               padding-top: 15px;
               font-size: 18px; }
-            body #content div.about div.about-row .col-md-4 .dmnfine div.logo {
+            body #content div.about div.about-row .col-lg-4 .dmnfine div.logo {
               background-image: url("img/damnfine.svg");
               background-repeat: no-repeat;
               background-position: center;
               background-size: contain;
               min-height: 200px; }
-            body #content div.about div.about-row .col-md-4 .dmnfine a:link, body #content div.about div.about-row .col-md-4 .dmnfine a:visited, body #content div.about div.about-row .col-md-4 .dmnfine a:hover {
+            body #content div.about div.about-row .col-lg-4 .dmnfine a:link, body #content div.about div.about-row .col-lg-4 .dmnfine a:visited, body #content div.about div.about-row .col-lg-4 .dmnfine a:hover {
               text-decoration: none;
               color: #141414; }
 
@@ -6311,117 +6341,119 @@ div.spacer {
           div.spacer div#filters div.col-md-12 div.filter span a:hover:after {
             width: 100%;
             background: white; }
-  div.spacer div.row, div.spacer header.site-header div.header-content-wrapper, header.site-header div.spacer div.header-content-wrapper {
-    margin-left: -45px;
-    margin-right: -45px; }
-    div.spacer div.row .col-md-6, div.spacer header.site-header div.header-content-wrapper .col-md-6, header.site-header div.spacer div.header-content-wrapper .col-md-6 {
-      padding: 45px; }
-      div.spacer div.row .col-md-6 a:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 a:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 a:hover {
-        text-decoration: none; }
-      div.spacer div.row .col-md-6 div.post-date, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date {
-        text-align: center;
+  @media (min-width: 992px) {
+    div.spacer div.row, div.spacer header.site-header div.header-content-wrapper, header.site-header div.spacer div.header-content-wrapper {
+      margin-left: -45px;
+      margin-right: -45px; } }
+  div.spacer div.row .col-md-6, div.spacer header.site-header div.header-content-wrapper .col-md-6, header.site-header div.spacer div.header-content-wrapper .col-md-6 {
+    padding: 45px; }
+    div.spacer div.row .col-md-6 a:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 a:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 a:hover {
+      text-decoration: none; }
+    div.spacer div.row .col-md-6 div.post-date, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date {
+      text-align: center;
+      font-family: "Oswald", cursive;
+      text-transform: uppercase;
+      color: #141414;
+      font-size: 18px;
+      font-weight: bold; }
+      div.spacer div.row .col-md-6 div.post-date:before, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:before, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:before {
+        content: "--- "; }
+      div.spacer div.row .col-md-6 div.post-date:after, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:after, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:after {
+        content: " ---"; }
+      div.spacer div.row .col-md-6 div.post-date:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:hover {
+        text-decoration: none !important; }
+    div.spacer div.row .col-md-6 div.post-cover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover {
+      padding: 5px;
+      background-color: lightgray;
+      position: relative;
+      overflow: hidden;
+      min-height: 300px; }
+      div.spacer div.row .col-md-6 div.post-cover div.small-post, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post {
+        z-index: 10;
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: white;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
         font-family: "Oswald", cursive;
-        text-transform: uppercase;
-        color: #141414;
-        font-size: 18px;
-        font-weight: bold; }
-        div.spacer div.row .col-md-6 div.post-date:before, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:before, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:before {
-          content: "--- "; }
-        div.spacer div.row .col-md-6 div.post-date:after, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:after, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:after {
-          content: " ---"; }
-        div.spacer div.row .col-md-6 div.post-date:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:hover {
-          text-decoration: none !important; }
-      div.spacer div.row .col-md-6 div.post-cover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover {
-        padding: 5px;
-        background-color: lightgray;
-        position: relative;
-        overflow: hidden;
-        min-height: 300px; }
-        div.spacer div.row .col-md-6 div.post-cover div.small-post, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post {
-          z-index: 10;
-          position: absolute;
-          display: block;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          color: white;
-          text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-          font-family: "Oswald", cursive;
+        font-size: 32px;
+        top: 0;
+        padding: 30px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: center;
+        transition: padding 0.2s ease-in-out; }
+        div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner {
+          padding: 15px;
+          border-top: 2px solid white;
+          border-bottom: 2px solid white;
+          width: 100%; }
+          div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner h1, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner h1, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner h1 {
+            font-size: 42px; }
+          div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner span.post-category, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner span.post-category, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner span.post-category {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 18px; }
+        div.spacer div.row .col-md-6 div.post-cover div.small-post:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post:hover {
+          padding: 15px; }
+        div.spacer div.row .col-md-6 div.post-cover div.small-post h3, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post h3, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post h3 {
           font-size: 32px;
-          top: 0;
-          padding: 30px;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          text-align: center;
-          transition: padding 0.2s ease-in-out; }
-          div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner {
-            padding: 15px;
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
-            width: 100%; }
-            div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner h1, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner h1, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner h1 {
-              font-size: 42px; }
-            div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner span.post-category, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner span.post-category, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner span.post-category {
-              padding-left: 15px;
-              padding-right: 15px;
-              font-size: 18px; }
-          div.spacer div.row .col-md-6 div.post-cover div.small-post:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post:hover {
-            padding: 15px; }
-          div.spacer div.row .col-md-6 div.post-cover div.small-post h3, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post h3, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post h3 {
-            font-size: 32px;
-            border-bottom: 5px #a11b17 dotted; }
-        div.spacer div.row .col-md-6 div.post-cover div.img-cover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.img-cover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.img-cover {
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          background-size: cover;
-          background-position: center;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: -webkit-transform 0.3s ease-in-out;
-          transition: transform 0.3s ease-in-out;
-          transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1); }
-          div.spacer div.row .col-md-6 div.post-cover div.img-cover:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.img-cover:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.img-cover:hover {
-            -webkit-transform: scale(1.03);
-            -ms-transform: scale(1.03);
-            transform: scale(1.03); }
+          border-bottom: 5px #a11b17 dotted; }
+      div.spacer div.row .col-md-6 div.post-cover div.img-cover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.img-cover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.img-cover {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: -webkit-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+        div.spacer div.row .col-md-6 div.post-cover div.img-cover:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.img-cover:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.img-cover:hover {
+          -webkit-transform: scale(1.03);
+          -ms-transform: scale(1.03);
+          transform: scale(1.03); }
 
 article.single {
   padding-top: 135px;
   font-size: 16px; }
-  article.single div.row, article.single header.site-header div.header-content-wrapper, header.site-header article.single div.header-content-wrapper {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    article.single div.row div.left, article.single header.site-header div.header-content-wrapper div.left, header.site-header article.single div.header-content-wrapper div.left, article.single div.row div.right, article.single header.site-header div.header-content-wrapper div.right, header.site-header article.single div.header-content-wrapper div.right {
-      padding: 45px; }
-    article.single div.row div.left, article.single header.site-header div.header-content-wrapper div.left, header.site-header article.single div.header-content-wrapper div.left {
-      background-color: #E7E0D0;
-      text-align: right;
-      position: relative; }
-      article.single div.row div.left h1, article.single header.site-header div.header-content-wrapper div.left h1, header.site-header article.single div.header-content-wrapper div.left h1 {
-        text-transform: uppercase;
-        font-size: 72px;
-        float: left; }
-      article.single div.row div.left span.post-category, article.single header.site-header div.header-content-wrapper div.left span.post-category, header.site-header article.single div.header-content-wrapper div.left span.post-category {
-        padding-left: 15px;
-        padding-right: 15px;
-        font-size: 24px;
-        text-transform: uppercase;
-        font-family: "Oswald", cursive; }
-    article.single div.row div.right, article.single header.site-header div.header-content-wrapper div.right, header.site-header article.single div.header-content-wrapper div.right {
-      padding-bottom: 90px; }
+  @media (min-width: 992px) {
+    article.single div.row, article.single header.site-header div.header-content-wrapper, header.site-header article.single div.header-content-wrapper {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
+  article.single div.row div.left, article.single header.site-header div.header-content-wrapper div.left, header.site-header article.single div.header-content-wrapper div.left, article.single div.row div.right, article.single header.site-header div.header-content-wrapper div.right, header.site-header article.single div.header-content-wrapper div.right {
+    padding: 45px; }
+  article.single div.row div.left, article.single header.site-header div.header-content-wrapper div.left, header.site-header article.single div.header-content-wrapper div.left {
+    background-color: #E7E0D0;
+    text-align: right;
+    position: relative; }
+    article.single div.row div.left h1, article.single header.site-header div.header-content-wrapper div.left h1, header.site-header article.single div.header-content-wrapper div.left h1 {
+      text-transform: uppercase;
+      font-size: 72px;
+      float: left; }
+    article.single div.row div.left span.post-category, article.single header.site-header div.header-content-wrapper div.left span.post-category, header.site-header article.single div.header-content-wrapper div.left span.post-category {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: "Oswald", cursive; }
+  article.single div.row div.right, article.single header.site-header div.header-content-wrapper div.right, header.site-header article.single div.header-content-wrapper div.right {
+    padding-bottom: 90px; }
 
 footer.site-footer {
   position: relative;
   z-index: 1;
-  min-height: 700px;
-  background-color: #141414; }
+  background-color: #141414;
+  padding: 45px; }
   footer.site-footer:before {
     background: inherit;
     content: '';
@@ -6444,4 +6476,5 @@ footer.site-footer {
     background-image: url("img/logo_wit.svg");
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 700px; }
+    background-size: contain;
+    height: 200px; }

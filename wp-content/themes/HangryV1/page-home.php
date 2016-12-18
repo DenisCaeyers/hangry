@@ -170,7 +170,7 @@ $toprowPosts = new WP_Query('posts_per_page=7');
                             </div>
                         </div>
                 </div><!-- End First Column General -->
-                <div class="col-md-4">
+                <div class="col-md-4 hidden-sm hidden-xs">
                     <div class="row">
                         <div class="col-md-12" id="fb-addin">
                             <div class="fb-page" data-href="https://www.facebook.com/Hangry.be/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Hangry.be/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Hangry.be/">Hangry</a></blockquote></div>
@@ -195,7 +195,7 @@ $toprowPosts = new WP_Query('posts_per_page=7');
      <div class="about"><!-- Start About -->
         <div class="container"><!-- Start About Container -->
             <div class="row about-row"><!-- Start About Row -->
-                <div class="col-md-4">
+                <div class="col-xs-12 col-lg-4">
                     <div class="text">
                         <div class="title">Han&bull;gry</div>
                         <div class="under">(han-gree) adj.</div> 
@@ -203,10 +203,10 @@ $toprowPosts = new WP_Query('posts_per_page=7');
                         <h3>En wij willen daar van af!</h3>
                     </div>
                 </div>
-                <div class="col-md-4 ">
+                <div class="col-xs-12 col-lg-4">
                     <div class="image"></div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-12 col-lg-4">
                     <div class="dmnfine">
                         <a href="https://www.facebook.com/DamnFineDesigns2016" target="_blank">
                             <i class="fa fa-star-o" aria-hidden="true"></i><span class="text">Special Thanks</span><i class="fa fa-star-o" aria-hidden="true"></i>
