@@ -12,6 +12,14 @@
     </head>
 
 <body <?php body_class(); ?>>
+        <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8&appId=146696435385967";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
 
         <header class="site-header clearfix">
             
@@ -29,7 +37,7 @@
                     </button>
                 </div>
                 <div class="container">
-                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-0="margin-top:-50px" data-300="margin-top:-100px;">
+                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-0="margin-top:-15px" data-300="margin-top:-75px;">
                             <div class="diamond">
                             <?php	 
                             if ( function_exists( 'the_custom_logo' ) ) {
@@ -60,8 +68,8 @@
                         <div class="left">
                             <div class="social-media">
                                 <ul class="social-media">
-                                    <li class="facebook"><a href="#"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
-                                    <li class="twitter"><a href="#"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
+                                    <li class="facebook"><a href="https://www.facebook.com/Hangry.be/" target="_blank"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
+                                    <li class="twitter"><a href="https://twitter.com/Hangry_dot_be"" target="_blank"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
                                     <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
                                     <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
                                 </ul>

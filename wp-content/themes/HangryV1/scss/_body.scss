@@ -4,22 +4,6 @@ body{
     #content{
         background-color: white;
         //box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.1);
-        article.post{
-            h2{
-                font-family: $f-title;
-            }
-            img{
-                @extend .img-responsive;
-            }
-        }
-        article.single{
-             h1{
-                font-family: $f-title;
-            }
-            img{
-                @extend .img-responsive;
-            }
-        }
         div.home-content{
             div.post-cover{
                 padding: 5px;
@@ -122,21 +106,37 @@ body{
                 @include angle(after,true);
                 background-color: white;
             }
-            div.mid-row{
+            div.general-row{
                 margin-left:$gutter-n*3;
                 margin-right:$gutter-n*3;
-                .col-md-4{
-                    padding: $gutter*3;
+                div.col-md-8{
+                    padding-left:$gutter*3;
+                    padding-right: $gutter*3;
+                    div.mid-row{
+                        margin-left:$gutter-n*3;
+                        margin-right:$gutter-n*3;
+                        .col-md-6{
+                            padding: $gutter*3;
+                        }
+                        div.post-cover{
+                            min-height: 300px;
+                        }
+                    }
+                    div.mid-row1{
+                        padding-top: $gutter*3;
+                    }
+                    div.mid-row3{
+                        padding-bottom: $gutter*3;
+                    }
                 }
-                div.post-cover{
-                    min-height: 300px;
+                div.col-md-4{
+                    padding-top: $gutter*6;
+                    padding-left:$gutter*3;
+                    padding-right: $gutter*3;
+                    #fb-addin{
+                        margin-bottom: $gutter*3;
+                    }
                 }
-            }
-            div.mid-row1{
-                padding-top: $gutter*3;
-            }
-            div.mid-row2{
-                padding-bottom: $gutter*3;
             }
 
             div.text-content{
@@ -155,6 +155,7 @@ body{
         div.about{
             background-color: $c-accent-3;
             @extend .clearfix;
+            @include angle(before);
             div.about-row{
                 padding-top: $gutter*3;
                 padding-bottom: $gutter*3;
@@ -163,9 +164,6 @@ body{
                 display: flex;
                 .col-md-4{
                     padding: $gutter*3;
-                    .text, .image,.dmnfine{
-                        border-top: 2px solid black;
-                    }
                     .text{
                         font-family: $f-title;
                         text-align: center;
@@ -211,7 +209,5 @@ body{
             }
             
         }
-
     }
-
 }

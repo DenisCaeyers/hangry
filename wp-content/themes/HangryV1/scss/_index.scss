@@ -1,0 +1,140 @@
+div.spacer{
+    margin-top: $gutter*12;
+    margin-bottom: $gutter*6;
+    .dark{
+        background-color: rgba(0,0,0,0.3);
+    }
+    div#filters{
+        div.col-md-12{
+             padding-left: $gutter*3;
+             padding-right: $gutter*3;
+             div.filter{
+                 padding: $gutter*3;
+                 background-color: $c-accent-3;
+                 h1{
+                     font-family: $f-title;
+                     text-transform: uppercase;
+                     margin: 0;
+                     margin-bottom: $gutter;
+                 }
+                 span{
+                     font-family: $f-title;
+                     text-transform: uppercase;
+                     margin: 0;
+                     a{
+                        transition:color .1s ease-in;
+                        position: relative;
+                        text-decoration: none;
+                        display: inline-block;
+                        transition: 0.1s ease;
+                        text-transform: uppercase;
+                        color: $c-accent-4;
+                        padding-right: $gutter*3;
+                        &:after{
+                            content: '';
+                            display: block;
+                            height: 3px;
+                            width: 0;
+                            background: transparent;
+                            transition: width .5s ease, background-color .5s ease;
+                        }
+                        &:hover:after {
+                            width: 100%;
+                            background: white;
+                        }
+                     }
+                 }
+             }
+        }
+    }
+    div.row{
+        margin-left:$gutter-n*3;
+        margin-right:$gutter-n*3;
+        .col-md-6{
+            padding: $gutter*3;
+            a{
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            div.post-date{
+                text-align: center;
+                font-family: $f-title;
+                text-transform: uppercase;
+                color: $c-accent-4;
+                font-size: 18px;
+                font-weight: bold;
+                &:before{
+                    content: "--- ";
+                }
+                &:after{
+                    content: " ---";
+                }
+                &:hover{
+                    text-decoration: none !important;
+                }
+            }
+            div.post-cover{
+                padding: 5px;
+                background-color: lightgray;
+                position: relative;
+                overflow: hidden;
+                min-height: 300px;
+                div.small-post{
+                    z-index: 10;
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: white;
+                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+                    font-family: $f-title;
+                    font-size: 32px;
+                    top: 0;
+                    padding: $gutter*2;
+                    display: flex;
+                    text-align: center;
+                    transition: padding 0.2s ease-in-out;
+                
+                    div.inner{
+                        padding: $gutter;
+                        border-top: 2px solid white;
+                        border-bottom: 2px solid white;
+                        width: 100%;
+                        h1{
+                            font-size: 42px;
+                        }
+                        span.post-category{
+                            padding-left: $gutter;
+                            padding-right: $gutter;
+                            font-size: 18px;
+                        }
+                    }
+                    &:hover{
+                        padding: $gutter;
+                    }
+                    h3{
+                        font-size: 32px;
+                        border-bottom: 5px $c-accent-2 dotted;
+                    }
+                }
+                div.img-cover{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    background-size: cover;
+                    background-position: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;               
+                    transition: transform 0.3s ease-in-out;
+                    transform: scale(1);
+                    &:hover{
+                        transform: scale(1.03);
+                    }
+                }
+            }
+        }
+    }   
+}

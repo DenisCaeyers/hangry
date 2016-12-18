@@ -1255,7 +1255,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive, body #content article.post img, body #content article.single img {
+.img-responsive {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -6066,10 +6066,6 @@ body {
   font-family: "Open Sans", sans-serif; }
   body #content {
     background-color: white; }
-    body #content article.post h2 {
-      font-family: "Oswald", cursive; }
-    body #content article.single h1 {
-      font-family: "Oswald", cursive; }
     body #content div.home-content div.post-cover {
       padding: 5px;
       background-color: lightgray;
@@ -6177,17 +6173,29 @@ body {
         -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
         transform-origin: 0 100%; }
-    body #content div.home-content div.mid-row {
+    body #content div.home-content div.general-row {
       margin-left: -45px;
       margin-right: -45px; }
-      body #content div.home-content div.mid-row .col-md-4 {
-        padding: 45px; }
-      body #content div.home-content div.mid-row div.post-cover {
-        min-height: 300px; }
-    body #content div.home-content div.mid-row1 {
-      padding-top: 45px; }
-    body #content div.home-content div.mid-row2 {
-      padding-bottom: 45px; }
+      body #content div.home-content div.general-row div.col-md-8 {
+        padding-left: 45px;
+        padding-right: 45px; }
+        body #content div.home-content div.general-row div.col-md-8 div.mid-row {
+          margin-left: -45px;
+          margin-right: -45px; }
+          body #content div.home-content div.general-row div.col-md-8 div.mid-row .col-md-6 {
+            padding: 45px; }
+          body #content div.home-content div.general-row div.col-md-8 div.mid-row div.post-cover {
+            min-height: 300px; }
+        body #content div.home-content div.general-row div.col-md-8 div.mid-row1 {
+          padding-top: 45px; }
+        body #content div.home-content div.general-row div.col-md-8 div.mid-row3 {
+          padding-bottom: 45px; }
+      body #content div.home-content div.general-row div.col-md-4 {
+        padding-top: 90px;
+        padding-left: 45px;
+        padding-right: 45px; }
+        body #content div.home-content div.general-row div.col-md-4 #fb-addin {
+          margin-bottom: 45px; }
     body #content div.home-content div.text-content {
       padding: 15px;
       display: -webkit-flex;
@@ -6201,7 +6209,27 @@ body {
         body #content div.home-content div.text-content h1:hover {
           text-decoration: none; }
     body #content div.about {
-      background-color: #E7E0D0; }
+      background-color: #E7E0D0;
+      position: relative;
+      z-index: 1; }
+      body #content div.about:before {
+        background: inherit;
+        content: '';
+        display: block;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        -webkit-backface-visibility: hidden; }
+      body #content div.about:before {
+        top: 0;
+        -webkit-transform: skewY(1.5deg);
+        -ms-transform: skewY(1.5deg);
+        transform: skewY(1.5deg);
+        -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0; }
       body #content div.about div.about-row {
         padding-top: 45px;
         padding-bottom: 45px;
@@ -6212,8 +6240,6 @@ body {
         display: flex; }
         body #content div.about div.about-row .col-md-4 {
           padding: 45px; }
-          body #content div.about div.about-row .col-md-4 .text, body #content div.about div.about-row .col-md-4 .image, body #content div.about div.about-row .col-md-4 .dmnfine {
-            border-top: 2px solid black; }
           body #content div.about div.about-row .col-md-4 .text {
             font-family: "Oswald", cursive;
             text-align: center; }
@@ -6246,6 +6272,125 @@ body {
               text-decoration: none;
               color: #141414; }
 
+div.spacer {
+  margin-top: 180px;
+  margin-bottom: 90px; }
+  div.spacer .dark {
+    background-color: rgba(0, 0, 0, 0.3); }
+  div.spacer div#filters div.col-md-12 {
+    padding-left: 45px;
+    padding-right: 45px; }
+    div.spacer div#filters div.col-md-12 div.filter {
+      padding: 45px;
+      background-color: #E7E0D0; }
+      div.spacer div#filters div.col-md-12 div.filter h1 {
+        font-family: "Oswald", cursive;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 15px; }
+      div.spacer div#filters div.col-md-12 div.filter span {
+        font-family: "Oswald", cursive;
+        text-transform: uppercase;
+        margin: 0; }
+        div.spacer div#filters div.col-md-12 div.filter span a {
+          transition: color .1s ease-in;
+          position: relative;
+          text-decoration: none;
+          display: inline-block;
+          transition: 0.1s ease;
+          text-transform: uppercase;
+          color: #141414;
+          padding-right: 45px; }
+          div.spacer div#filters div.col-md-12 div.filter span a:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 0;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease; }
+          div.spacer div#filters div.col-md-12 div.filter span a:hover:after {
+            width: 100%;
+            background: white; }
+  div.spacer div.row, div.spacer header.site-header div.header-content-wrapper, header.site-header div.spacer div.header-content-wrapper {
+    margin-left: -45px;
+    margin-right: -45px; }
+    div.spacer div.row .col-md-6, div.spacer header.site-header div.header-content-wrapper .col-md-6, header.site-header div.spacer div.header-content-wrapper .col-md-6 {
+      padding: 45px; }
+      div.spacer div.row .col-md-6 a:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 a:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 a:hover {
+        text-decoration: none; }
+      div.spacer div.row .col-md-6 div.post-date, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date {
+        text-align: center;
+        font-family: "Oswald", cursive;
+        text-transform: uppercase;
+        color: #141414;
+        font-size: 18px;
+        font-weight: bold; }
+        div.spacer div.row .col-md-6 div.post-date:before, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:before, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:before {
+          content: "--- "; }
+        div.spacer div.row .col-md-6 div.post-date:after, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:after, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:after {
+          content: " ---"; }
+        div.spacer div.row .col-md-6 div.post-date:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-date:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-date:hover {
+          text-decoration: none !important; }
+      div.spacer div.row .col-md-6 div.post-cover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover {
+        padding: 5px;
+        background-color: lightgray;
+        position: relative;
+        overflow: hidden;
+        min-height: 300px; }
+        div.spacer div.row .col-md-6 div.post-cover div.small-post, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post {
+          z-index: 10;
+          position: absolute;
+          display: block;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: white;
+          text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+          font-family: "Oswald", cursive;
+          font-size: 32px;
+          top: 0;
+          padding: 30px;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          text-align: center;
+          transition: padding 0.2s ease-in-out; }
+          div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner {
+            padding: 15px;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            width: 100%; }
+            div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner h1, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner h1, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner h1 {
+              font-size: 42px; }
+            div.spacer div.row .col-md-6 div.post-cover div.small-post div.inner span.post-category, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner span.post-category, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post div.inner span.post-category {
+              padding-left: 15px;
+              padding-right: 15px;
+              font-size: 18px; }
+          div.spacer div.row .col-md-6 div.post-cover div.small-post:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post:hover {
+            padding: 15px; }
+          div.spacer div.row .col-md-6 div.post-cover div.small-post h3, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.small-post h3, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.small-post h3 {
+            font-size: 32px;
+            border-bottom: 5px #a11b17 dotted; }
+        div.spacer div.row .col-md-6 div.post-cover div.img-cover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.img-cover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.img-cover {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1); }
+          div.spacer div.row .col-md-6 div.post-cover div.img-cover:hover, div.spacer header.site-header div.header-content-wrapper .col-md-6 div.post-cover div.img-cover:hover, header.site-header div.spacer div.header-content-wrapper .col-md-6 div.post-cover div.img-cover:hover {
+            -webkit-transform: scale(1.03);
+            -ms-transform: scale(1.03);
+            transform: scale(1.03); }
+
 article.single {
   padding-top: 135px;
   font-size: 16px; }
@@ -6269,6 +6414,8 @@ article.single {
         font-size: 24px;
         text-transform: uppercase;
         font-family: "Oswald", cursive; }
+    article.single div.row div.right, article.single header.site-header div.header-content-wrapper div.right, header.site-header article.single div.header-content-wrapper div.right {
+      padding-bottom: 90px; }
 
 footer.site-footer {
   position: relative;
