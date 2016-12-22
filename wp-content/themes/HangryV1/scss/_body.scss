@@ -191,6 +191,17 @@ body{
                         }
 
                     }
+                    .image{
+                        font-family: $f-title;
+                        text-align: center;
+                         .title{
+                            font-size: 32px;
+                        }
+                         p{
+                            font-size: 18px;
+                            padding-top: $gutter;
+                        }
+                    }
                     .dmnfine{
                         font-family: $f-title;
                         font-size: 32px;

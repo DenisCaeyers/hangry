@@ -70,13 +70,12 @@
                     <div class="collapse navbar-collapse" id="navbar">
                     
                     <ul class="nav navbar-nav navbar-left sub-nav left-nav">
-                        <li><a href="#">Alle Recepten</a></li>
-                        <li><a href="#">Basisrecepten</a></li>
+                        <li><a href="http://www.hangry.be/?s=">Alle Recepten</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right sub-nav right-nav">
-                        <li><a href="#">Link nog in te vullen</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="https://www.facebook.com/Hangry.be">Onze Facebook</a></li>
+                        <li><a href="https://twitter.com/Hangry_dot_be">Onze Twitter</a></li>
                     </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
@@ -88,7 +87,6 @@
                                 <ul class="social-media">
                                     <li class="facebook"><a href="https://www.facebook.com/Hangry.be/" target="_blank"><i class="fa fa-2 fa-facebook-square" aria-hidden="true"></i></a></li>
                                     <li class="twitter"><a href="https://twitter.com/Hangry_dot_be" target="_blank"><i class="fa fa-2 fa-twitter-square" aria-hidden="true"></i></a></li>
-                                    <li class="pinterest"><a href="#"><i class="fa fa-2 fa-pinterest-square" aria-hidden="true"></i></a></li>
                                     <li class="instagram"><a href="#"><i class="fa fa-2 fa-instagram" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>

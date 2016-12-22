@@ -18,6 +18,14 @@ function theme_prefix_setup() {
 
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
+function SearchFilter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');
 
 // Add Featured image thumbnail
 function hangryv1_setup(){
