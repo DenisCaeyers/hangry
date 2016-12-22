@@ -12,6 +12,7 @@
     </head>
 
 <body <?php body_class(); ?>>
+<div id="skrollr-body">
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -20,24 +21,6 @@
         js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8&appId=146696435385967";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-
-        <script>
-            $(function () {
-                // initialize skrollr if the window width is large enough
-                if ($(window).width() > 767) {
-                    skrollr.init(yourOptions);
-                }
-
-                // disable skrollr if the window is resized below 768px wide
-                $(window).on('resize', function () {
-                    if ($(window).width() <= 767) {
-                    skrollr.init().destroy(); // skrollr.init() returns the singleton created above
-                    }
-                });
-            });
-        </script>
-
-
         <header class="site-header clearfix">
             
              <nav class="navbar navbar-default navbar-fixed-top" role="navigation" data-0="padding:15px" data-100="padding:0px;"><
