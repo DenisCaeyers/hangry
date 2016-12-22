@@ -204,7 +204,9 @@ $toprowPosts = new WP_Query('posts_per_page=7');
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-4">
-                    <div class="image"></div>
+                    <div class="image">
+                    Ik ben Annelies. Ik hou van eten, schrijven en gezelligheid. Die 3 combineer ik in deze blog. Ik haal receptjes van overal, en probeer er iets gezelligs van te maken.
+                    </div>
                 </div>
                 <div class="col-xs-12 col-lg-4">
                     <div class="dmnfine">
