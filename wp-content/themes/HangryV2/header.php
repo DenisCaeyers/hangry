@@ -27,7 +27,8 @@
                 ?>
             ">Home</a>
             <a href="/alle-recepten">Alle recepten</a>
-            <a href="#">Hangry Proeft!</a>
+            <a href="/hangry-proeft">Hangry Proeft!</a>
+			<a href="/contact">Contact</a>
             <a href="https://www.facebook.com/Hangry.be/" target="_blank"><i class="fa fa-3 fa-facebook-official" aria-hidden="true"></i></a>
             <a href="https://twitter.com/Hangry_dot_be" target="_blank"><i class="fa fa-3 fa-twitter-square" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/hangry.be/" target="_blank"><i class="fa fa-3 fa-instagram" aria-hidden="true"></i></a>
@@ -113,7 +114,8 @@
                         ?>
                     ">Home</a>
                     <a href="/alle-recepten">Alle recepten</a>
-                    <a href="#">Hangry Proeft!</a>
+                    <a href="/hangry-proeft">Hangry Proeft!</a>
+					<a href="/contact">Contact</a>
                     <a href="https://www.facebook.com/Hangry.be/" target="_blank"><i class="fa fa-3 fa-facebook-official" aria-hidden="true"></i></a>
                     <a href="https://twitter.com/Hangry_dot_be" target="_blank"><i class="fa fa-3 fa-twitter-square" aria-hidden="true"></i></a>
                     <a href="https://www.instagram.com/hangry.be/" target="_blank"><i class="fa fa-3 fa-instagram" aria-hidden="true"></i></a>
